@@ -1,0 +1,275 @@
+title {
+  font-family: coffee;
+}
+
+.parent {
+  width: 100%;
+  background-color: #3b3b3b;
+  font-family: coffee;
+  margin-top: 100px; /* جبران ارتفاع منوی ثابت */
+}
+
+.logo {
+  width: 100%;
+  height: 400px;
+  margin-top: -20px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  height: 70%;
+  margin: 0px auto;
+  margin-top: 0px;
+}
+
+.title-logo {
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.daste-ha {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding-top: 1%;
+  box-sizing: border-box;
+  background-color: #3b3b3b;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.daste-ha #text {
+  margin-bottom: 4px;
+}
+
+.daste-ha nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: #3b3b3b;
+}
+
+.daste-ha ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.daste-ha button {
+  background-color: transparent;
+  border: 2px solid #D4AF37;
+  color: #D4AF37;
+  font-size: 16px;
+  border-radius: 23px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+}
+
+.daste-ha button img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.daste-ha button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #D4AF37;
+  opacity: 0.1;
+  transition: all 0.4s ease;
+  z-index: 0;
+}
+
+.daste-ha button:hover::before {
+  left: 0;
+}
+
+.daste-ha button:hover {
+  background-color: #D4AF37;
+  color: #121212;
+  box-shadow: 0 0 10px #D4AF37aa;
+}
+
+.daste-ha button span {
+  position: relative;
+  z-index: 1;
+}
+
+.menu{
+  width: 100%;
+  background-color: #3b3b3b;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  .line-1{
+    width: 90%;
+    height: 5px;
+    margin-top: 15px;
+    background-color: #D4AF37;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.687);
+    border-radius: 50%;
+  }
+  .title-1{
+    font-family: coffee;
+    color: white;
+    margin-top: 25px;
+    font-size: 25px;
+    
+  }
+  .menu-nav {
+    width: 85%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #1f1f1f;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    direction: rtl; /* این کل تراز منو رو راست‌چین می‌کنه */
+  }
+  
+  .menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid #444;
+    color: #f5f5f5;
+    font-family: coffee, sans-serif;
+    font-size: 20px;
+    text-align: right;
+  }
+  
+  .menu-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .item-name {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .item-price {
+    flex-shrink: 0;
+    color: #D4AF37;
+    font-weight: bold;
+    text-align: left;
+    min-width: 100px; /* این کمک می‌کنه قیمت‌ مرتب‌تر دیده بشه */
+  }
+  
+  /* استایل فوتر */
+  .footer {
+    background-color: #3b3b3b;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    font-family: 'coffee', sans-serif;
+    box-sizing: border-box;
+    margin-top: 40px;
+    border-top: 2px solid #D4AF37;
+    position: relative;
+  }
+  
+  .footer-content p {
+    font-size: 22px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    font-weight: 300;
+  }
+  
+  .instagram-link {
+    display: inline-block;
+    padding: 15px;
+    background-color: rgba(212, 175, 55, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .instagram-link:hover {
+    background-color: #D4AF37;
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+  }
+  
+  .instagram-icon {
+    width: 56px;
+    height: 48px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+  
+  .instagram-link:hover .instagram-icon {
+    transform: scale(1.1);
+  }
+  
+  .footer .footer-content a {
+    margin-top: 20px;
+    display: inline-block;
+    transition: all 0.8s ease;
+  }
+  
+  .footer .footer-content a:hover {
+    transform: scale(1.1);
+  }
+  
+  
+}
+
+@media (max-width: 785px) {
+  .daste-ha button {
+    font-size: 14px;
+    padding: 8px 12px;
+    gap: 6px;
+  }
+  
+  .daste-ha button img {
+    width: 16px;
+    height: 16px;
+  }
+  .logo{
+    padding-top: 4vw;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 389px) {
+  .daste-ha button {
+    font-size: 14px;
+    padding: 8px 12px;
+    gap: 6px;
+  }
+  
+  .daste-ha button img {
+    width: 16px;
+    height: 16px;
+  }
+  .logo{
+    padding-top: 30vw;
+    box-sizing: border-box;
+  }
+}
